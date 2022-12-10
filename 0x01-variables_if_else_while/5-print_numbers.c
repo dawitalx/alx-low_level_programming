@@ -16,3 +16,4 @@ while (a <= 10)
 }
 putchar('\n');
 return (0);
+}
