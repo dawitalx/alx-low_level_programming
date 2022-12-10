@@ -11,9 +11,9 @@ int main(void)
 char a = 'a';
 while (a < 'z')
 {
-	putchar("%c",a);
+	putchar(a);
 	a++;
 }
-putchar("%c",a);
+putchar(a);
 return (0);
 }
