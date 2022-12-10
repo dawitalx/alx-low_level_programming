@@ -14,8 +14,8 @@ while (a <= 'z' || aa <= 'Z')
 {
 	if (a <= 'z')
 	{
-        	putchar(a);
-        	a++;
+		putchar(a);
+		a++;
 	}
 	else if (aa <= 'Z')
 	{
