@@ -17,12 +17,11 @@ while (a <= 'z' || aa <= 'Z')
         	putchar(a);
         	a++;
 	}
-	else if(aa <= 'Z')
+	else if (aa <= 'Z')
 	{
 		putchar(aa);
 		aa++;
 	}
-	
 }
 putchar('\n');
 return (0);
