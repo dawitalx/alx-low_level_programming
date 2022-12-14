@@ -7,48 +7,22 @@
  */
 void jack_bauer(void)
 {
-	char a = '0';
-	char b = '0';
-	char c = '0';
-	char d = '0';
-	while (d <= '9')
+	int hours = 0;
+	int min = 0;
+
+	while (hours < 24)
 	{
-		_putchar(a);
-		_putchar(b);
-		_putchar(':');
-		_putchar(c);
-		_putchar(d);
-		a++;
-		_putchar('\n');
-		while (c <= '5')
+		while (min < 60)
 		{
-			_putchar(a);
-		       	_putchar(b);
+			_putchar('0' + (hours / 10));
+			_putchar('0' + (hours % 10));
 			_putchar(':');
-			_putchar(c);
-			_putchar(d);
-			b++;
+			_putchar('0' + (min / 10));
+			_putchar('0' + (min % 10));
 			_putchar('\n');
-			while (b <= '3')
-			{
-				_putchar(a);
-				_putchar(b);
-				_putchar(':');
-				_putchar(c);
-				_putchar(d);
-				c++;
-				_putchar('\n');
-				while (a <= '2')
-				{
-					_putchar(a);
-					_putchar(b);
-					_putchar(':');
-					_putchar(c);
-					_putchar(d);
-					d++;
-					_putchar('\n');
-				}
-			}
+			min++;
 		}
+		min = 0;
+		hours++;
 	}
 }
