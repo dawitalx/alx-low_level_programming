@@ -2,11 +2,15 @@
 
 /**
  * print_last_digit - prints the last digit of anumber.
- *@c: character to check`
+ *@n: character to check`
  * Return: 1
  */
-int print_last_digit(int c)
+int print_last_digit(int n)
 {
-	_putchar(c % 10);
-	return (0);
+	if (n < 0)
+		n *= -1;
+
+       	_putchar('0' + (n % 10));
+
+	return (n % 10);
 }
