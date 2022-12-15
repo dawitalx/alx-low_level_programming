@@ -1,22 +1,16 @@
 #include "main.h"
 
 /**
- * print_line - draw strait line in the terminal.
- * @n: intiger to be checked
+ * print_line - print the character "_" n times to draw a line
+ * @n: number of characters to draw
  */
 
 void print_line(int n)
 {
-	if (n <= 0)
-	{
-		_putchar('\n');
-	}
-	else
-	{
-		while (n--)
-		{
-			_putchar('-');
-			_putchar('\n');
-		}
-	}
+	int times = n;
+
+	for (times = n; times > 0; times--)
+		_putchar('_');
+
+	_putchar('\n');
 }
