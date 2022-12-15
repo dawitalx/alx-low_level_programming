@@ -2,12 +2,12 @@
 
 /**
  * _isdigit - cheks for digits.
- * @n: intiger 
- * return: 1 if it is adigit other wise 0
+ * @c: intiger 
+ * Return: 1 if it is adigit other wise 0
  */
-int _isdigit(int n)
+int _isdigit(int c)
 {
-	if ( n >= 0 && n <=9)
+	if (c >= 0 && c <= 9)
 	{
 		return (1);
 	}
