@@ -5,7 +5,7 @@
  *
  * Return: Void
  */
-int print_numbers(void)
+void print_numbers(void)
 {
 	int a = '0';
 	int check = '9';
@@ -15,5 +15,4 @@ int print_numbers(void)
 		_putchar('\n');
 		a++;
 	}
-	return (0);
 }
