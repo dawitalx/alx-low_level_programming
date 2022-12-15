@@ -1,13 +1,13 @@
 #include "main.h"
 
 /**
- * _isdigit - cheks for digits.
- * @c: intiger 
- * Return: 1 if it is adigit other wise 0
+ *_isdigit - cheks for digits.
+ *@c: intiger to be cheked
+ *Return: 1 if it is adigit other wise 0
  */
 int _isdigit(int c)
 {
-	if (c >= 0 && c <= 9)
+	if (c >= '0' && c <= '9')
 	{
 		return (1);
 	}
