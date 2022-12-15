@@ -1,11 +1,10 @@
 #include "main.h"
 
 /**
- *_isdigit - check for digit
- *@n: check intiger n
- *return: 1 if digit otherwise 0
+ * _isdigit - cheks for digits.
+ * @n: intiger 
+ * return: 1 if it is adigit other wise 0
  */
-
 int _isdigit(int n)
 {
 	if ( n >= 0 && n <=9)
