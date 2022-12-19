@@ -7,20 +7,26 @@
 
 void print_rev(char *s)
 {
-	int size = 0;
+
+	int len = 0;
 	int i;
 
+	/* iterate to find length of string and point to last character */
 	while (*s != '\0')
 	{
-		s++;
-		size++;
+		len++;
+		++s;
 	}
+
+	/* go back to character before null character */
 	s--;
 
-	for (i = size; i > 0; i--)
+	/* print string reversed */
+	for (i = len; i > 0; i--)
 	{
 		_putchar(*s);
 		s--;
 	}
-	_putchar('\n');	
+
+	_putchar('\n');
 }
