@@ -1,8 +1,8 @@
 #include "main.h"
 
 /**
- * puts2 - prints every other character.
- * @str: string to be printed.
+ * _strlen - length.
+ * @s: character to be counted.
  */
 
 int _strlen(char *s)
@@ -17,6 +17,11 @@ int _strlen(char *s)
 
 	return (len);
 }
+
+/**
+ * puts2 - prints every second character of a string, followed by a new line
+ * @str: string to print
+ */
 
 void puts2(char *str)
 {
