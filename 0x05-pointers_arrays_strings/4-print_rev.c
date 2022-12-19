@@ -8,19 +8,17 @@
 void print_rev(char *s)
 {
 	int size = 0;
-	char *first = s;
 	while (*s != '\0')
 	{
 		s++;
 		size++;
 	}
-	if (*first != '\0')
+	if (*s == '\0')
 	{
-		first+=size;
-		while (*first != *s)
+		while (size--)
 		{
-			_putchar(*first);
-			first--;
+			_putchar(*s);
+			s--;
 		}
 	}
 	
