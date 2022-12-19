@@ -3,6 +3,7 @@
 /**
  * _strlen - length.
  * @s: character to be counted.
+ * Return: length of s.
  */
 
 int _strlen(char *s)
