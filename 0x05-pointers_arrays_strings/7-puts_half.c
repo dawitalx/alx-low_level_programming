@@ -26,12 +26,12 @@ int _strlen(char *s)
 
 void puts_half(char *str)
 {
-	int len = _strlen(*s);
+	int len = _strlen(str);
 	int i = 0;
 	while (i <= len/2 )
 	{
-		_putchar(*s);
-		s++;
+		_putchar(*str);
+		str++;
 		i++;
 	}
 	_putchar('\n');
