@@ -11,8 +11,6 @@ char *_strpbrk(char *s, char *accept)
 {
 	int i;
 	int j;
-	char *f;
-	int findex = 0;
 
 	for (i = 0; s[i] != '\0'; i++)
 	{
@@ -20,11 +18,10 @@ char *_strpbrk(char *s, char *accept)
 		{
 			if (s[i] == accept[j])
 			{
-				f[findex] = s[i];
-				findex++;
+				return (&s[i]);
 			}
 		}
 	}
 
-	return (f);
+	return (Null);
 }
