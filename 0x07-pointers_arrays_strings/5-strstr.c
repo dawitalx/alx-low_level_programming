@@ -2,34 +2,39 @@
 #define NULL 0
 
 /**
- * _strst - find the first occurance of substring
- * @haystack: string to be searched
- * @needle: string to be checked
- * Return: pointer of needle
+ * _strstr - locate and return pointer to first occurence of substring
+ * @haystack: string to search
+ * @needle: target substring to search for
+ * Return: pointer to index of string at first occurence of whole substring
  */
 
 char *_strstr(char *haystack, char *needle)
 {
-	int i = 0;
-	int j = 0;
+	int i = 0, j, x;
 
-	while (haystack[i] != '\0')
+	if (needle[0] == '\0')
+		return (haystack);
+
+	while (haystack[i] != '\0') /* iterate through haystack */
 	{
-		while (needle[j] != '\0')
+		/* if a byte matches first char of needle */
+		/* interate through needle until match ends */
+		if (haystack[i] == needle[0])
 		{
-			if (haystack[i] != needle[j])
+			x = i, j = 0;
+			while (needle[j] != '\0')
 			{
-				j = 0;
-				break;
+				if (haystack[x] == needle[j])
+					x++, j++;
+				else
+					break;
+			} /* if matched throughout, return haystack */
+			if (needle[j] == '\0')
+			{
+				return (haystack + i);
 			}
-			j++;
-		}
-		if (needle[j] == '\0')
-		{
-			return (haystack + i);
 		}
 		i++;
 	}
-
-	return (NULL);
+	return (NULL); /* No match */
 }
