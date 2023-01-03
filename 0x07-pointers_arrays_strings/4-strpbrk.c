@@ -1,4 +1,5 @@
 #include "main.h"
+#define NULL 0
 
 /**
  * _strpbrk - search string for any set of bytes
@@ -23,5 +24,5 @@ char *_strpbrk(char *s, char *accept)
 		}
 	}
 
-	return (Null);
+	return (NULL);
 }
