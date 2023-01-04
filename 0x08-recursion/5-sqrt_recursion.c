@@ -1,20 +1,33 @@
 #include "main.h"
 
 /**
- * _sqrt_recursion - find natural square root
- * @n: intiger to be manipulated
- * Return: square root
+ * find_root - find square root of n, starting from the smallest possible, 0
+ * @n: n
+ * @root: test this root
+ * Return: natural square root, or -1 if not natural root
+ */
+
+int find_root(int n, int root)
+{
+	if (root * root > n)
+		return (-1);
+
+	if (root * root == n)
+		return (root);
+
+	return (find_root(n, root + 1));
+}
+
+/**
+ * _sqrt_recursion - find natural square root of n
+ * @n: n
+ * Return: natural square root, or -1 if not natural root
  */
 
 int _sqrt_recursion(int n)
 {
-	int result = n;
-
-	if (result * result > n)
+	if (n < 0)
 		return (-1);
 
-	if (result * result == n)
-		return (result);
-
-	return (_sqrt_recursion(n--));
+	return (find_root(n, 0));
 }
