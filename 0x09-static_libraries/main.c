@@ -1,5 +1,3 @@
-!<arch>
-main.c/         0           0     0     644     728       `
 #include "main.h"
 
 int _putchar(char c)
