@@ -1,3 +1,5 @@
+#include "main.h"
+
 int _isalpha(int c)
 {
 	/*check if character is either A-Z or a-z*/
