@@ -6,7 +6,7 @@
  * main - multiple two number
  * argc: number of argument
  * argv: pointer of argument
- * Return: multiplication of two number
+ * Return: 0 or 1
  */
 
 int main(int argc, char *argv[])
