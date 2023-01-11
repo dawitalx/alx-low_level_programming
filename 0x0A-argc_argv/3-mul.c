@@ -3,14 +3,15 @@
 #include <stdlib.h>
 
 /**
- * main - multiple two number
- * argc: number of argument
- * argv: pointer of argument
- * Return: 0 on success, 1 on error
+ * main - print product of argument numbers
+ * @argc: argument counter
+ * @argv: numbers to multiply
+ * Return: 0 on success, 1 if two arguments not given
  */
 
 int main(int argc, char *argv[])
 {
+
 	if (argc != 3)
 	{
 		printf("Error\n");
