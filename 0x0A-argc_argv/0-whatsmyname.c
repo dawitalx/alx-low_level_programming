@@ -7,7 +7,10 @@
  * @argv: array of command
  */
 
-void main(int argc, char *argv)
+int main(int argc, char *argv[])
 {
-	printf("%d", argv[0]);
+	if (args > 0)
+		printf("%d", argv[0]);
+
+	return (0);
 }
