@@ -1,4 +1,3 @@
-#include <stdlib.h>
 #include <stdio.h>
 
 /**
@@ -6,7 +5,7 @@
  * Return: 0 on sucess
  */
 
-int main()
+int main(viod)
 {
 	printf("%s\n", __FILE__);
 	return (0);
