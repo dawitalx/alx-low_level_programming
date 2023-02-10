@@ -1,4 +1,4 @@
-#include "stdlib.h"
+#include <stdlib.h>
 
 /**
  * main - prints the nam of the file compiled
