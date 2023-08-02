@@ -20,7 +20,7 @@ int check(int a, int b)
 /**
  * _sqrt_recursion - return the squre root of the nuumber
  * @n: the number to be computed
- * Result: the square root of n
+ * Return: the square root of n or -1
  */
 
 int _sqrt_recursion(int n)
