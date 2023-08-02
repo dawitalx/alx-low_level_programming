@@ -15,7 +15,7 @@ int factorial(int n)
 	{
 		return (1);
 	}
-	else if (N > 0)
+	else if (n > 0)
 	{
 		fact = n * factorial(n - 1);
 	}
