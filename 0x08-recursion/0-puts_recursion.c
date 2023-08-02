@@ -11,11 +11,8 @@ void _puts_recursion(char *s)
 {
 	if(*s)
 	{
-	while (*s != EOF)
-	{
 		_putchar(*s);
-		s++;
-	}
+		_puts_recursion(s + 1);
 	}
 	else
 	{
