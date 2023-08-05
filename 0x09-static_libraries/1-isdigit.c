@@ -1,5 +1,4 @@
 #include "main.h"
-  
 /**
  * _isdigit - function
  * @c: int
@@ -8,5 +7,5 @@
 
 int _isdigit(int c)
 {
-        return (0);
+	return (0);
 }

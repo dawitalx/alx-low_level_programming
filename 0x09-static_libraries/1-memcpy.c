@@ -1,5 +1,4 @@
 #include "main.h"
-  
 /**
  * _memcpy - function
  * @dest: char
@@ -10,5 +9,5 @@
 
 char *_memcpy(char *dest, char *src, unsigned int n)
 {
-        return (0);
+	return (0);
 }

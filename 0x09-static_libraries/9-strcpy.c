@@ -1,5 +1,4 @@
 #include "main.h"
-  
 /**
  * _strcpy - function
  * @dest: char
@@ -9,5 +8,5 @@
 
 char *_strcpy(char *dest, char *src)
 {
-        return (0);
+	return (0);
 }

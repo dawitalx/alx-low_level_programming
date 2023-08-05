@@ -1,5 +1,4 @@
 #include "main.h"
-  
 /**
  * _strspn - function
  * @s: str
@@ -9,5 +8,5 @@
 
 unsigned int _strspn(char *s, char *accept)
 {
-        return (0);
+	return (0);
 }

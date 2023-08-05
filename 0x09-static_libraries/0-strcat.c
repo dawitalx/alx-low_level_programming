@@ -1,5 +1,4 @@
 #include "main.h"
-  
 /**
  * _strcat - function
  * @dest: ptr
@@ -9,5 +8,5 @@
 
 char *_strcat(char *dest, char *src)
 {
-        return (0);
+	return (0);
 }
