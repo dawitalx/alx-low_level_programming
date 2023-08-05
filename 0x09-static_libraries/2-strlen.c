@@ -1,7 +1,8 @@
 #include "main.h"
   
 /**
- * _putchar - function
+ * _strlen - function
+ * @s: char
  * Return: just 0
  */
 

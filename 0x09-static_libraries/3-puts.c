@@ -1,8 +1,9 @@
 #include "main.h"
   
 /**
- * _putchar - function
- * Return: just 0
+ * _puts - function
+ * @s: char
+ * Return: void
  */
 
 void _puts(char *s)

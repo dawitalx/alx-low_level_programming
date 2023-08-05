@@ -1,7 +1,9 @@
 #include "main.h"
   
 /**
- * _putchar - function
+ * _strcpy - function
+ * @dest: char
+ * @src: src
  * Return: just 0
  */
 

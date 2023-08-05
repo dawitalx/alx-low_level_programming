@@ -1,7 +1,10 @@
 #include "main.h"
   
 /**
- * _putchar - function
+ * _strncpy - function
+ * @dest: char
+ * @src: src
+ * @n: int
  * Return: just 0
  */
 

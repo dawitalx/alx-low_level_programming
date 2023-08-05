@@ -1,7 +1,9 @@
 #include "main.h"
   
 /**
- * _putchar - function
+ * _strstr - function
+ * @haystack: char
+ * @needle: char
  * Return: just 0
  */
 

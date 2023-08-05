@@ -1,7 +1,9 @@
 #include "main.h"
   
 /**
- * _putchar - function
+ * _strpbrk - function
+ * @s: char
+ * @accept: char
  * Return: just 0
  */
 

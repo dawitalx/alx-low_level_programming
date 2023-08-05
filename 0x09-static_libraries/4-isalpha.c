@@ -1,7 +1,8 @@
 #include "main.h"
   
 /**
- * _putchar - function
+ * _isalpha - function
+ * @c: int
  * Return: just 0
  */
 
