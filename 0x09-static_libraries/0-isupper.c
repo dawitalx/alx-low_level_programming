@@ -1,11 +1,11 @@
 #include "main.h"
 
 /**
- * main - the main fuction
+ * _putchar - function
  * Return: just 0
  */
 
-int main()
+int _putchar(char c)
 {
 	return 0;
 }
