@@ -1,4 +1,5 @@
 #include "main.h"
+#include "stdio.h"
 /**
  * main - function prints its  program name
  * @argc: int
@@ -6,7 +7,7 @@
  * Return: just 0
  */
 
-int main(argc, *argv[])
+int main(int argc, char *argv[])
 {
-	_putchar("%d\n", argv[0]);
+	printf("%s\n", argv[0]);
 }
