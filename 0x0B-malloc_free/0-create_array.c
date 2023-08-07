@@ -11,6 +11,7 @@
 char *create_array(unsigned int size, char c)
 {
 	int len = size;
+	int cnum = c;
 	if (len == 0)
 	{
 		return (NULL);
