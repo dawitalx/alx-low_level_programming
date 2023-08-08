@@ -12,13 +12,19 @@ char *_strdup(char *str)
 	int i = 0;
 	char *ptr;
 
+	if (!*str)
+	{
+		printf("failed to allocate memory");
+		return NULL;
+	}
+
 	while (*str)
 	{
 		str++;
 		strlen++;
 	}
 
-	ptr = (char *)malloc(sizeof(char) * strlen);
+	ptr = (char *)malloc(sizeof(char) * (strlen + 1));
 
 	str = str - strlen;
 
