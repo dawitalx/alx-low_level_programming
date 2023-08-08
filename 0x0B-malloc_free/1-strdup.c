@@ -10,13 +10,13 @@
 char *_strdup(char *str)
 {
 	int strlen = 0;
-	int i = 0;
+	int i = 1;
 	char *ptr;
 
-	if (!*str)
+	if (!*str || *str == NULL)
 	{
 		printf("failed to allocate memory");
-		return NULL;
+		return (NULL);
 	}
 
 	while (*str)
