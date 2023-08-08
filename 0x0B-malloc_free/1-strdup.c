@@ -10,6 +10,7 @@ char *_strdup(char *str)
 {
 	int strlen = 0;
 	int i = 0;
+	char *ptr;
 
 	while (*str)
 	{
@@ -17,7 +18,7 @@ char *_strdup(char *str)
 		strlen++;
 	}
 
-	char *ptr = (char *)malloc(sizeof(char) * strlen);
+	ptr = (char *)malloc(sizeof(char) * strlen);
 
 	str = str - strlen;
 
