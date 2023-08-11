@@ -8,6 +8,7 @@
  * @n: no of bytes
  * Return: pointer or NULL
  */
+void check_len(char *s1, char *s2, int *len1, int *len2);
 
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
@@ -18,11 +19,11 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 
 	check_len(s1, s2, &len1, &len2);
 
-	int *s1ptr = malloc(sizeof(char) * len1);
-	int *s2ptr = malloc(sizeof(char) * len2);
-	int *s12 = malloc(sizeof(char) * (len1 + len2));
+	char *s1ptr = malloc(sizeof(char) * len1);
+	char *s2ptr = malloc(sizeof(char) * len2);
+	s12 = malloc(sizeof(char) * (len1 + len2));
 
-	if (s1ptr == NULL || s2ptr == NULL || s112 == Null)
+	if (s1ptr == NULL || s2ptr == NULL || s12 == NULL)
 	{
 		return (NULL);
 	}
@@ -48,7 +49,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	return (s12);
 }
 
-int check_len(char *s1, char *s2, int *len1, int *len2)
+void check_len(char *s1, char *s2, int *len1, int *len2)
 {
 	while (s1)
 	{
@@ -59,6 +60,4 @@ int check_len(char *s1, char *s2, int *len1, int *len2)
 	{
 		*len2++;
 	}
-
-	return (0);
 }
