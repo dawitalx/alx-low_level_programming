@@ -9,37 +9,56 @@
  * Return: pointer or NULL
  */
 
+void check_len(char *s1, char *s2, int *len1, int *len2);
+
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	char *s;
-	unsigned int i = 0, j = 0, len1 = 0, len2 = 0;
+        int len1 = 0;
+        int len2 = 0;
+        int ncheck = 0;
+        int i = 0;
+        char *s12;
 
-	while (s1 && s1[len1])
-		len1++;
-	while (s2 && s2[len2])
-		len2++;
+        check_len(s1, s2, &len1, &len2);
 
-	if (n < len2)
-		s = malloc(sizeof(char) * (len1 + n + 1));
-	else
-		s = malloc(sizeof(char) * (len1 + len2 + 1));
+        char *s1ptr = malloc(sizeof(char) * (len1 + 1)); // Include space for the null terminator
+        char *s2ptr = malloc(sizeof(char) * (n + 1));   // Include space for the null terminator
+        s12 = malloc(sizeof(char) * (len1 + n + 1));    // Include space for the null terminator
 
-	if (!s)
-		return (NULL);
+        if (s1ptr == NULL || s2ptr == NULL || s12 == NULL)
+        {
+                return (NULL);
+        }
 
-	while (i < len1)
-	{
-		s[i] = s1[i];
-		i++;
-	}
+        for (i = 0; i < len1; i++)
+        {
+                s12[i] = s1[i];
+        }
 
-	while (n < len2 && i < (len1 + n))
-		s[i++] = s2[j++];
+        for (i = 0; i < n && s2[i] != '\0'; i++) // Only copy up to 'n' characters from s2
+        {
+                s12[len1 + i] = s2[i];
+        }
 
-	while (n >= len2 && i < (len1 + len2))
-		s[i++] = s2[j++];
+        s12[len1 + i] = '\0'; // Null-terminate the concatenated string
 
-	s[i] = '\0';
+        free(s1ptr);
+        free(s2ptr);
 
-	return (s);
+        return (s12);
+}
+
+void check_len(char *s1, char *s2, int *len1, int *len2)
+{
+        while (*s1)
+        {
+              (*len1)++;
+              s1++;
+        }
+
+        while (*s2)
+        {
+                (*len2)++;
+                s2++;
+        }
 }
