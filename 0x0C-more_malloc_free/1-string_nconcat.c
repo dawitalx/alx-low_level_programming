@@ -8,56 +8,38 @@
  * @n: no of bytes
  * Return: pointer or NULL
  */
-void check_len(char *s1, char *s2, int *len1, int *len2);
 
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	int len1 = 0;
-	int len2 = 0;
-	char *s12;
-	int ncheck = 0;
+	char *s;
+	unsigned int i = 0, j = 0, len1 = 0, len2 = 0;
 
-	check_len(s1, s2, &len1, &len2);
+	while (s1 && s1[len1])
+		len1++;
+	while (s2 && s2[len2])
+		len2++;
 
-	char *s1ptr = malloc(sizeof(char) * len1);
-	char *s2ptr = malloc(sizeof(char) * len2);
-	s12 = malloc(sizeof(char) * (len1 + len2));
+	if (n < len2)
+		s = malloc(sizeof(char) * (len1 + n + 1));
+	else
+		s = malloc(sizeof(char) * (len1 + len2 + 1));
 
-	if (s1ptr == NULL || s2ptr == NULL || s12 == NULL)
-	{
+	if (!s)
 		return (NULL);
-	}
-	for (int i = 0; i <= len1; i++)
+
+	while (i < len1)
 	{
-		s12[i] = s1[i];
+		s[i] = s1[i];
+		i++;
 	}
 
-	for (int i = len1 + 1; i <= (len1 + len2); i++)
-	{
-		ncheck++;
+	while (n < len2 && i < (len1 + n))
+		s[i++] = s2[j++];
 
-		if (ncheck <= n)
-		{
-			s12[i] = s2[i];
-		}
-		else if (ncheck > len2)
-		{
-			break;
-		}
-	}
+	while (n >= len2 && i < (len1 + len2))
+		s[i++] = s2[j++];
 
-	return (s12);
-}
+	s[i] = '\0';
 
-void check_len(char *s1, char *s2, int *len1, int *len2)
-{
-	while (s1)
-	{
-		*len1++;
-	}
-
-	while (s2)
-	{
-		*len2++;
-	}
+	return (s);
 }
