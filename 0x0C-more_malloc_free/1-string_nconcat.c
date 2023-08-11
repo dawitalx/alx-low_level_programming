@@ -50,12 +50,12 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 
 int check_len(char *s1, char *s2, int *len1, int *len2)
 {
-	while (*s1)
+	while (s1)
 	{
 		*len1++;
 	}
 
-	while (*s2)
+	while (s2)
 	{
 		*len2++;
 	}
