@@ -11,37 +11,17 @@
 
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-    if (nmemb == 0 || size == 0)
-    {
-        return NULL;
-    }
-    
-    void *ptr = malloc(nmemb * size);
-    
-    if (ptr != NULL)
-    {
-        memset(ptr, 0, nmemb * size);
-    }
+	if (nmemb == 0 || size == 0)
+	{
+		return (NULL);
+	}
 
-    return (ptr);
-}
+	void *ptr = malloc(nmemb * size);
 
-int main(void) {
-    unsigned int num_elements = 5;
-    unsigned int element_size = sizeof(int);
+	if (ptr != NULL)
+	{
+		memset(ptr, 0, nmemb * size);
+	}
 
-    int *arr = _calloc(num_elements, element_size);
-
-    if (arr != NULL) {
-        for (unsigned int i = 0; i < num_elements; i++) {
-            printf("%d ", arr[i]); // Print the elements (should be all zeros)
-        }
-        printf("\n");
-
-        free(arr);
-    } else {
-        printf("Memory allocation failed.\n");
-    }
-
-    return 0;
+	return (ptr);
 }
