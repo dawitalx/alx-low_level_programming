@@ -10,29 +10,22 @@
  */
 
 list_t *add_node(list_t **head, const char *str)
+
 {
-	typedef struct list_t
-	{
-		char *str;
-		struct list_t *next;
-	} list_t;
+	list_t *new_node;
+	unsigned int len = 0;
 
-	if (str == NULL)
+	while(str[len])
+		len++;
+
+	new_node = (list_t *)malloc(sizeof(list_t));
+	if (new_node == NULL)
 		return (NULL);
 
-	list_t *newNode = (list_t *)malloc(sizeof(list_t));
+	new_node->str = strdup(str);
+	new_node->len = len;
+	new_node->next = (*head);
+	(*head) = new_node;
 
-	if (newNode == NULL)
-		return (NULL);
-
-	newNode->str = strdup(str);
-	if (newNode->str == NULL)
-	{
-		free(newNode);
-		return (NULL);
-	}
-
-	newNode->next = *head;
-	*head = newNode;
-	return (newNode);
+	return (new_node);
 }
