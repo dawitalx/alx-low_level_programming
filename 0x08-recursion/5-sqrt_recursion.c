@@ -16,7 +16,7 @@ int sqr_root(int n, int root)
 	{
 		return (root);
 	}
-	return sqr_root(n, root - 1);
+	return (sqr_root(n, root - 1));
 }
 /**
  * _sqrt_recursion - find square root
@@ -30,5 +30,5 @@ int _sqrt_recursion(int n)
 	{
 		return (1);
 	}
-	return sqr_root(n, n);
+	return (sqr_root(n, n));
 }
