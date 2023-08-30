@@ -16,7 +16,7 @@ int sqr_root(int n, int root)
 	{
 		return (root);
 	}
-	return (sqr_root(n, root - 1));
+	return (sqr_root(n, root + 1));
 }
 /**
  * _sqrt_recursion - find square root
