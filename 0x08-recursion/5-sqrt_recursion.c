@@ -8,7 +8,7 @@
 
 int sqr_root(int n, int root)
 {
-	if (root <=  1)
+	if (root * root  > n)
 	{
 		return (-1);
 	}
@@ -34,5 +34,5 @@ int _sqrt_recursion(int n)
 	{
 		return (-1);
 	}
-	return (sqr_root(n, n));
+	return (sqr_root(n, 0));
 }
