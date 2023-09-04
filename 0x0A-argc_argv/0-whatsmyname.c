@@ -1,21 +1,17 @@
 #include "main.h"
+#include <stdio.h>
+
 /**
- * main - returns the program name
- * @argc: no of argument
- * @argv: array of arg
- * Return: 0
+ * main - prints programs name
+ * @argc: number of commands
+ * @argv: array of command
+ * Return: 0 on success
  */
 
 int main(int argc, char *argv[])
 {
-	char *progname;
+	if (argc > 0)
+		printf("%s\n", argv[0]);
 
-	progname = argv[0];
-	(void)argc;
-	while (*progname)
-	{
-		_putchar(*progname);
-		progname++;
-	}
 	return (0);
 }
