@@ -20,6 +20,8 @@ char *create_array(unsigned int size, char c)
 		array++;
 		count++;
 	}
+	*array = "\0";
+	count++;
 	array = array - count;
 	free(array);
 	return (array);
