@@ -1,4 +1,6 @@
 #include <stdio.h>
+#include <stddef.h>
+
 /**
  * array_iterator - execute function on an array via a function ptr
  * @array: array
